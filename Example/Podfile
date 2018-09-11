@@ -1,0 +1,14 @@
+use_frameworks!
+
+target 'JHTagListView_Example' do
+  pod 'JHTagListView', :path => '../'
+
+  target 'JHTagListView_Tests' do
+    inherit! :search_paths
+
+    pod 'Specta'
+    pod 'Expecta'
+    pod 'FBSnapshotTestCase'
+    pod 'Expecta+Snapshots'
+  end
+end
