@@ -402,10 +402,10 @@
             </objects>
             <point key="canvasLocation" x="1200.8" y="-152.47376311844079"/>
         </scene>
-        <!--Tag Base View Controller-->
+        <!--Dai Ban View Controller-->
         <scene sceneID="duu-OO-f0q">
             <objects>
-                <viewController storyboardIdentifier="JHTagBaseViewController" id="ST0-0u-JQ0" customClass="JHTagBaseViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="JHTagBaseViewController" id="ST0-0u-JQ0" customClass="DaiBanViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="D7X-2l-aoS"/>
                         <viewControllerLayoutGuide type="bottom" id="VVh-Qc-r4G"/>
@@ -420,7 +420,7 @@
                                 <color key="separatorColor" red="0.87443292139999995" green="0.87455910439999995" blue="0.87440532449999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="FilterPatrolStoreCellView" rowHeight="157" id="U8Q-MO-4is" customClass="FilterPatrolStoreCellView">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="FilterPatrolStoreCellView" rowHeight="157" id="U8Q-MO-4is" customClass="DaiBanCellView">
                                         <rect key="frame" x="0.0" y="28" width="375" height="157"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="U8Q-MO-4is" id="eZC-DC-dbF">
