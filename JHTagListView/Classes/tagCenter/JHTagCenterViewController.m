@@ -7,7 +7,7 @@
 //
 
 #import "JHTagCenterViewController.h"
-#import "SearchShopsViewController.h"
+#import "DaiBanViewController.h"
 
 #import "PatrolSearchBar.h"
 #import "JHTagListView.h"
@@ -281,9 +281,17 @@
         line.backgroundColor = selColor;
         line.hidden = YES;
         [label addSubview:line];
+        /// 当第一个tag时，显示红点
+        if (i == 0) {
+            UIImageView *reddot = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"tab_xiaohongdian"]];
+            [reddot sizeToFit];
+            reddot.center = CGPointMake(labelW - 20, 14);
+            [label addSubview:reddot];
+        }
+        
         // 添加到titleLabels数组
         [self.titleLabels addObject:label];
-        
+    
         // 添加点按手势
         UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(titleClick:)];
         [label addGestureRecognizer:tap];
@@ -406,14 +414,16 @@
 // 添加所有子控制器
 - (void)setUpChildViewController
 {
-    SearchShopsViewController *ssVc1 = [self.storyboard instantiateViewControllerWithIdentifier:@"SearchShopsViewController"];
+    DaiBanViewController *ssVc1 = [self.storyboard instantiateViewControllerWithIdentifier:@"JHTagBaseViewController"];
     ssVc1.title = @"待办(123)";
     [self addChildViewController:ssVc1];
-    SearchShopsViewController *ssVc2 = [self.storyboard instantiateViewControllerWithIdentifier:@"SearchShopsViewController"];
+    [ssVc1 didMoveToParentViewController:self];
+    DaiBanViewController *ssVc2 = [self.storyboard instantiateViewControllerWithIdentifier:@"JHTagBaseViewController"];
     ssVc2.title = @"已办(123)";
+    [ssVc2 didMoveToParentViewController:self];
     [self addChildViewController:ssVc2];
     
-    SearchShopsViewController *ssVc3 = [self.storyboard instantiateViewControllerWithIdentifier:@"SearchShopsViewController"];
+    DaiBanViewController *ssVc3 = [self.storyboard instantiateViewControllerWithIdentifier:@"JHTagBaseViewController"];
     ssVc3.title = @"管理(123)";
     [self addChildViewController:ssVc3];
 }

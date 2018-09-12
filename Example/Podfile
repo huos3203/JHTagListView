@@ -1,7 +1,8 @@
 use_frameworks!
 
 target 'JHTagListView_Example' do
-  pod 'JHTagListView', :path => '../'
+#  pod 'JHTagListView', :path => '../'
+  pod 'MJRefresh'
 
   target 'JHTagListView_Tests' do
     inherit! :search_paths

@@ -6,11 +6,10 @@
 //  Copyright © 2018年 huoshuguang. All rights reserved.
 //
 
-#import "FilterPatrolStoreCellView.h"
-#import "RestStoreListModel.h"
-#import "SearchShopsViewController.h"
+#import "DaiBanCellView.h"
+#import "DaiBanCellModel.h"
 //#import "UIColor+HexString.h"
-@interface FilterPatrolStoreCellView()
+@interface DaiBanCellView()
 @property (strong, nonatomic) IBOutlet UILabel *ibTitleLabel;
 @property (strong, nonatomic) IBOutlet UILabel *ibStatusLabel;
 @property (strong, nonatomic) IBOutlet UIButton *ibCheckButton;
@@ -23,13 +22,13 @@
 
 @end
 
-@implementation FilterPatrolStoreCellView
+@implementation DaiBanCellView
 
 
--(void)setStoreModel:(RestStoreListModel *)storeModel
+-(void)setModel:(DaiBanCellModel *)model
 {
-    _ibTitleLabel.text = storeModel.Name;
+    _ibTitleLabel.text = model.Name;
     _ibTitleConstraint.constant = [UIScreen mainScreen].bounds.size.width - 90;
-    _ibAddressLabel.text = storeModel.Address;
+    _ibAddressLabel.text = model.Address;
 }
 @end

@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-@class RestStoreListModel;
-@interface FilterPatrolStoreCellView : UITableViewCell
-@property (strong, nonatomic) RestStoreListModel *storeModel;
+@class DaiBanCellModel;
+@interface DaiBanCellView : UITableViewCell
+@property (strong, nonatomic) DaiBanCellModel *model;
 @end

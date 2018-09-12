@@ -402,10 +402,10 @@
             </objects>
             <point key="canvasLocation" x="1200.8" y="-152.47376311844079"/>
         </scene>
-        <!--Search Shops View Controller-->
+        <!--Tag Base View Controller-->
         <scene sceneID="duu-OO-f0q">
             <objects>
-                <viewController storyboardIdentifier="SearchShopsViewController" id="ST0-0u-JQ0" customClass="SearchShopsViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="JHTagBaseViewController" id="ST0-0u-JQ0" customClass="JHTagBaseViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="D7X-2l-aoS"/>
                         <viewControllerLayoutGuide type="bottom" id="VVh-Qc-r4G"/>
@@ -543,6 +543,10 @@
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="ST0-0u-JQ0" id="mCn-BQ-xRh"/>
+                                    <outlet property="delegate" destination="ST0-0u-JQ0" id="SR1-yX-1Mc"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -553,6 +557,9 @@
                             <constraint firstAttribute="trailing" secondItem="A1c-PP-CLM" secondAttribute="trailing" id="wk3-9I-FWv"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="A1c-PP-CLM" id="yD0-Mc-F1p"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Tz-Nk-cir" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

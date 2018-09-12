@@ -6,8 +6,8 @@
 //  Copyright © 2018年 huoshuguang. All rights reserved.
 //
 
-#import "RestStoreListModel.h"
+#import "DaiBanCellModel.h"
 
-@implementation RestStoreListModel
+@implementation DaiBanCellModel
 
 @end
