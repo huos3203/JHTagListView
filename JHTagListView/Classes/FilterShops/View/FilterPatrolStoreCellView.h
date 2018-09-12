@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 @class RestStoreListModel;
-@interface FilterStoreCellView : UITableViewCell
+@interface FilterPatrolStoreCellView : UITableViewCell
 @property (strong, nonatomic) RestStoreListModel *storeModel;
 @end

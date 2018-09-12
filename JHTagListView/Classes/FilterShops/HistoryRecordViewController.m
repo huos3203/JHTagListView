@@ -9,7 +9,7 @@
 #import "HistoryRecordViewController.h"
 #import "YZTagList.h"
 #import "PatrolSearchBar.h"
-#import "Utility.h"
+//#import "Utility.h"
 @interface HistoryRecordViewController ()<UISearchBarDelegate>
 @property (strong, nonatomic) IBOutlet UIScrollView *ibScrollView;
 @property (strong, nonatomic) IBOutlet PatrolSearchBar *ibSearchBar;
@@ -108,7 +108,7 @@
 -(void)searchBarSearchButtonClicked:(UISearchBar *)searchBar{
     NSString *str = [searchBar.text stringByReplacingOccurrencesOfString:@" " withString:@""];
     if (str.length == 0) {
-        [Utility showAllTextDialog:self.view Text:@"请输入搜索内容"];
+//        [Utility showAllTextDialog:self.view Text:@"请输入搜索内容"];
         return;
     }
     

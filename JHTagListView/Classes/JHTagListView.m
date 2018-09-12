@@ -13,13 +13,16 @@
 #import "YZTagGroupCell.h"
 #import "YZGroupHeaderView.h"
 #import "TableCellViewInCell.h"
-#import "ReqFilterServer.h"
+//#import "ReqFilterServer.h"
+
+#import "StoreLocationModel.h"
 
 @interface JHTagListView()
 @property (strong, nonatomic) IBOutlet UITableView *ibTableView;
 //动画
 @property (strong, nonatomic) IBOutlet NSLayoutConstraint *ibTableViewToLeftViewConut;
 @property (strong, nonatomic) IBOutlet NSLayoutConstraint *ibShadeToFilterViewConut;
+@property (nonatomic, strong) NSMutableArray *groups;
 @end
 
 @implementation JHTagListView
@@ -139,26 +142,26 @@
     JHGroupItem *section = [JHGroupItem new];
     section.name = @"主体业态";
     NSArray *topArr = [self parseModel:allTypeArr ToItemBy:@"00000000-0000-0000-0000-000000000000"];
-    for (StoreAllTypeModel *groupType in topArr) {
-        //解析单元格
-        JHTagGroupItem *groupItem = [JHTagGroupItem new];
-        JHTagItem *all = [JHTagItem new];
-        all.name = @"全部";
-        all.cellid = groupType.Id;
-        all.level = @"1";
-        all.isSelected = YES;
-        [groupItem.data addObject:all];
-        groupItem.name = groupType.Name;
-        NSArray *itemArr = [self parseModel:allTypeArr ToItemBy:groupType.Id];
-        for (StoreAllTypeModel *model in itemArr) {
-            JHTagItem *item = [JHTagItem new];
-            item.name = model.Name;
-            item.cellid = model.Id;
-            item.level = @"2";
-            [groupItem.data addObject:item];
-        }
-        [section.data addObject:groupItem];
-    }
+//    for (StoreAllTypeModel *groupType in topArr) {
+//        //解析单元格
+//        JHTagGroupItem *groupItem = [JHTagGroupItem new];
+//        JHTagItem *all = [JHTagItem new];
+//        all.name = @"全部";
+//        all.cellid = groupType.Id;
+//        all.level = @"1";
+//        all.isSelected = YES;
+//        [groupItem.data addObject:all];
+//        groupItem.name = groupType.Name;
+//        NSArray *itemArr = [self parseModel:allTypeArr ToItemBy:groupType.Id];
+//        for (StoreAllTypeModel *model in itemArr) {
+//            JHTagItem *item = [JHTagItem new];
+//            item.name = model.Name;
+//            item.cellid = model.Id;
+//            item.level = @"2";
+//            [groupItem.data addObject:item];
+//        }
+//        [section.data addObject:groupItem];
+//    }
     //主体业态
     [self.groups addObject:section];
 }
@@ -217,76 +220,9 @@
 }
 
 
-- (IBAction)ibaResetTableViewAction:(id)sender {
-    _filterModel.storeTypeId = @"";
-    _filterModel.storeTypeLevel = 0;
-    _filterModel.locationId = @"";
-    _filterModel.locationLevel = 0;
-    _filterModel.inspectEnum = 2;
-    for (int i = 0; i < self.groups.count; i++) {
-        JHGroupItem *group = self.groups[i];
-        for (JHTagGroupItem *item in group.data) {
-            if (item.isOpened) {
-                if (i == 0) {
-                    item.isOpened = NO;
-                    group.cellVH = group.cellVH - item.dpCellH;
-                }
-                for (JHTagItem *tag in item.data) {
-                    if (tag.isSelected) {
-                        tag.isSelected = NO;
-                        JHTagItem *tag = item.data[0];
-                        tag.isSelected = YES;
-                        break;
-                    }
-                }
-            }
-        }
-    }
-    _filterModel.time = nil;
-    _filterModel.pageNo = 1;
-    [_shopDataArray removeAllObjects];
-    [self ibaClickFilterButtonAction:nil];
-    [self reqFilterDataList];
-}
-
-- (IBAction)ibaStartFilterAction:(id)sender {
-    
-    for (int i = 0; i < self.groups.count; i++) {
-        JHGroupItem *group = self.groups[i];
-        for (JHTagGroupItem *item in group.data) {
-            if (item.isOpened) {
-                for (JHTagItem *tag in item.data) {
-                    if (tag.isSelected) {
-                        if (i == 0)
-                        {
-                            _filterModel.storeTypeId = tag.cellid;
-                            _filterModel.storeTypeLevel = [self toInt:tag.level];
-                            break;
-                        }
-                        if (i == 1) {
-                            _filterModel.locationId = tag.cellid;
-                            _filterModel.locationLevel = [self toInt:tag.level];
-                            break;
-                        }
-                        if (i == 2){
-                            _filterModel.inspectEnum = [self toInt:tag.cellid];
-                            break;
-                        }
-                    }
-                }
-            }
-        }
-    }
-    _filterModel.time = nil;
-    _filterModel.pageNo = 1;
-    [_shopDataArray removeAllObjects];
-    [self ibaClickFilterButtonAction:nil];
-    [self reqFilterDataList];
-}
-
 -(BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer *)gestureRecognizer
 {
-    CGFloat kx = [gestureRecognizer locationInView:_ibRootShadeView].x;
+    CGFloat kx = [gestureRecognizer locationInView:self].x;
     BOOL yB = (kx < 50);
     if (yB) {
         return true;
@@ -299,19 +235,19 @@
     if (!group) {
         return;
     }
-    dispatch_group_enter(group);
-    [[ReqFilterServer shared] reqStoreTypeHandler:^(NSArray<StoreAllTypeModel *> *listModel) {
-        //主体业态
-        [self parseFilterStoreTypeData:listModel];
-        dispatch_group_leave(_group);
-    }];
-    dispatch_group_enter(group);
-    [[ReqFilterServer shared] reqStoreLocationHandler:^(NSArray<StoreLocationModel *> *listModel) {
-        //分局地址
-        [self parseFilterStoreLocationData:listModel];
-        ///先加载已经指定的检查情况
-        dispatch_group_leave(group);
-    }];
+//    dispatch_group_enter(group);
+//    [[ReqFilterServer shared] reqStoreTypeHandler:^(NSArray<StoreAllTypeModel *> *listModel) {
+//        //主体业态
+//        [self parseFilterStoreTypeData:listModel];
+//        dispatch_group_leave(group);
+//    }];
+//    dispatch_group_enter(group);
+//    [[ReqFilterServer shared] reqStoreLocationHandler:^(NSArray<StoreLocationModel *> *listModel) {
+//        //分局地址
+//        [self parseFilterStoreLocationData:listModel];
+//        ///先加载已经指定的检查情况
+//        dispatch_group_leave(group);
+//    }];
 }
 
 -(void)showListView
@@ -324,5 +260,14 @@
         }
         _isHiddenFilterView = !_isHiddenFilterView;
     }];
+}
+
+#pragma mark - getter / setter
+- (NSArray *)groups
+{
+    if (_groups == nil) {
+        _groups = [NSMutableArray array];
+    }
+    return _groups;
 }
 @end
