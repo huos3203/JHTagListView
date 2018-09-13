@@ -30,12 +30,12 @@
 		05C572232147D24C00B7068B /* YZTagList.m in Sources */ = {isa = PBXBuildFile; fileRef = 05C572142147D24C00B7068B /* YZTagList.m */; };
 		05C572262147D28100B7068B /* JHTagListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 05C572252147D28100B7068B /* JHTagListView.m */; };
 		05C572452147D5D100B7068B /* HistoryRecordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 05C572292147D5D100B7068B /* HistoryRecordViewController.m */; };
-		05C5724D2147D5D100B7068B /* CellViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 05C5723C2147D5D100B7068B /* CellViewModel.m */; };
-		05C5724E2147D5D100B7068B /* CollectionInTableCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 05C5723E2147D5D100B7068B /* CollectionInTableCellView.m */; };
-		05C5724F2147D5D100B7068B /* TableCellViewInCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 05C572402147D5D100B7068B /* TableCellViewInCell.m */; };
 		05C572502147D5D100B7068B /* DaiBanCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 05C572422147D5D100B7068B /* DaiBanCellView.m */; };
-		05C572512147D5D100B7068B /* PatrolSearchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 05C572442147D5D100B7068B /* PatrolSearchBar.m */; };
+		05C572512147D5D100B7068B /* FilterPatrolSearchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 05C572442147D5D100B7068B /* FilterPatrolSearchBar.m */; };
 		05C572522147D9FB00B7068B /* ReqFilterStoreModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 05C5722E2147D5D100B7068B /* ReqFilterStoreModel.m */; };
+		05DA4818214A3D300042A8F9 /* JHFilterStoreTypeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 05DA4817214A3D300042A8F9 /* JHFilterStoreTypeCell.m */; };
+		05DA481B214A4E7B0042A8F9 /* JHFilterPatrolTimeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 05DA481A214A4E7B0042A8F9 /* JHFilterPatrolTimeCell.m */; };
+		05DA481E214A6EB10042A8F9 /* DateAlertController.m in Sources */ = {isa = PBXBuildFile; fileRef = 05DA481C214A6EB00042A8F9 /* DateAlertController.m */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
 		6003F592195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
@@ -117,16 +117,16 @@
 		05C572362147D5D100B7068B /* ReqFilterServer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReqFilterServer.m; sourceTree = "<group>"; };
 		05C572372147D5D100B7068B /* DaiBanViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DaiBanViewController.h; sourceTree = "<group>"; };
 		05C572382147D5D100B7068B /* DaiBanViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DaiBanViewController.m; sourceTree = "<group>"; };
-		05C5723B2147D5D100B7068B /* CellViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CellViewModel.h; sourceTree = "<group>"; };
-		05C5723C2147D5D100B7068B /* CellViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CellViewModel.m; sourceTree = "<group>"; };
-		05C5723D2147D5D100B7068B /* CollectionInTableCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionInTableCellView.h; sourceTree = "<group>"; };
-		05C5723E2147D5D100B7068B /* CollectionInTableCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionInTableCellView.m; sourceTree = "<group>"; };
-		05C5723F2147D5D100B7068B /* TableCellViewInCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableCellViewInCell.h; sourceTree = "<group>"; };
-		05C572402147D5D100B7068B /* TableCellViewInCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableCellViewInCell.m; sourceTree = "<group>"; };
 		05C572412147D5D100B7068B /* DaiBanCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DaiBanCellView.h; sourceTree = "<group>"; };
 		05C572422147D5D100B7068B /* DaiBanCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DaiBanCellView.m; sourceTree = "<group>"; };
-		05C572432147D5D100B7068B /* PatrolSearchBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PatrolSearchBar.h; sourceTree = "<group>"; };
-		05C572442147D5D100B7068B /* PatrolSearchBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PatrolSearchBar.m; sourceTree = "<group>"; };
+		05C572432147D5D100B7068B /* FilterPatrolSearchBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FilterPatrolSearchBar.h; sourceTree = "<group>"; };
+		05C572442147D5D100B7068B /* FilterPatrolSearchBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FilterPatrolSearchBar.m; sourceTree = "<group>"; };
+		05DA4816214A3D300042A8F9 /* JHFilterStoreTypeCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JHFilterStoreTypeCell.h; sourceTree = "<group>"; };
+		05DA4817214A3D300042A8F9 /* JHFilterStoreTypeCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JHFilterStoreTypeCell.m; sourceTree = "<group>"; };
+		05DA4819214A4E7B0042A8F9 /* JHFilterPatrolTimeCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JHFilterPatrolTimeCell.h; sourceTree = "<group>"; };
+		05DA481A214A4E7B0042A8F9 /* JHFilterPatrolTimeCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JHFilterPatrolTimeCell.m; sourceTree = "<group>"; };
+		05DA481C214A6EB00042A8F9 /* DateAlertController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateAlertController.m; sourceTree = "<group>"; };
+		05DA481D214A6EB00042A8F9 /* DateAlertController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateAlertController.h; sourceTree = "<group>"; };
 		1BB8352C8ED419EC04C53651 /* Pods_JHTagListView_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JHTagListView_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58A195388D20070C39A /* JHTagListView_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JHTagListView_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -300,6 +300,7 @@
 		05C572272147D5D100B7068B /* FilterShops */ = {
 			isa = PBXGroup;
 			children = (
+				05C5723A2147D5D100B7068B /* View */,
 				05C572352147D5D100B7068B /* ReqFilterServer.h */,
 				05C572362147D5D100B7068B /* ReqFilterServer.m */,
 				05C572372147D5D100B7068B /* DaiBanViewController.h */,
@@ -307,7 +308,6 @@
 				05C572282147D5D100B7068B /* HistoryRecordViewController.h */,
 				05C572292147D5D100B7068B /* HistoryRecordViewController.m */,
 				05C5722A2147D5D100B7068B /* Model */,
-				05C572392147D5D100B7068B /* View */,
 			);
 			path = FilterShops;
 			sourceTree = "<group>";
@@ -327,27 +327,19 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		05C572392147D5D100B7068B /* View */ = {
+		05C5723A2147D5D100B7068B /* View */ = {
 			isa = PBXGroup;
 			children = (
-				05C5723A2147D5D100B7068B /* FilterShopView */,
-				05C572432147D5D100B7068B /* PatrolSearchBar.h */,
-				05C572442147D5D100B7068B /* PatrolSearchBar.m */,
+				05C572432147D5D100B7068B /* FilterPatrolSearchBar.h */,
+				05C572442147D5D100B7068B /* FilterPatrolSearchBar.m */,
+				05DA4816214A3D300042A8F9 /* JHFilterStoreTypeCell.h */,
+				05DA4817214A3D300042A8F9 /* JHFilterStoreTypeCell.m */,
+				05DA4819214A4E7B0042A8F9 /* JHFilterPatrolTimeCell.h */,
+				05DA481A214A4E7B0042A8F9 /* JHFilterPatrolTimeCell.m */,
+				05DA481D214A6EB00042A8F9 /* DateAlertController.h */,
+				05DA481C214A6EB00042A8F9 /* DateAlertController.m */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		05C5723A2147D5D100B7068B /* FilterShopView */ = {
-			isa = PBXGroup;
-			children = (
-				05C5723B2147D5D100B7068B /* CellViewModel.h */,
-				05C5723C2147D5D100B7068B /* CellViewModel.m */,
-				05C5723D2147D5D100B7068B /* CollectionInTableCellView.h */,
-				05C5723E2147D5D100B7068B /* CollectionInTableCellView.m */,
-				05C5723F2147D5D100B7068B /* TableCellViewInCell.h */,
-				05C572402147D5D100B7068B /* TableCellViewInCell.m */,
-			);
-			path = FilterShopView;
 			sourceTree = "<group>";
 		};
 		06B070B3D9502887143A239F /* Pods */ = {
@@ -644,31 +636,31 @@
 			files = (
 				05C572152147D24C00B7068B /* JHGroupItem.m in Sources */,
 				05C572232147D24C00B7068B /* YZTagList.m in Sources */,
-				05C572512147D5D100B7068B /* PatrolSearchBar.m in Sources */,
+				05C572512147D5D100B7068B /* FilterPatrolSearchBar.m in Sources */,
 				05C572222147D24C00B7068B /* YZTagButton.m in Sources */,
 				052C5CA82148FC4600A31B24 /* JHTagCenterViewController.m in Sources */,
 				052C5CA42148E46700A31B24 /* CommonModel.m in Sources */,
 				052C5CAE2149283B00A31B24 /* JHTagCellModel.m in Sources */,
+				05DA4818214A3D300042A8F9 /* JHFilterStoreTypeCell.m in Sources */,
 				6003F59E195388D20070C39A /* JHAppDelegate.m in Sources */,
-				05C5724F2147D5D100B7068B /* TableCellViewInCell.m in Sources */,
+				05DA481E214A6EB10042A8F9 /* DateAlertController.m in Sources */,
 				052C5CB021492D0300A31B24 /* DaiBanCellModel.m in Sources */,
 				052C5CAB21491BFC00A31B24 /* JHTagBaseViewController.m in Sources */,
 				05C5721E2147D24C00B7068B /* YZTagCell.m in Sources */,
 				05C572172147D24C00B7068B /* JHTagItem.m in Sources */,
 				052C5CA32148E06900A31B24 /* DaiBanViewController.m in Sources */,
-				05C5724D2147D5D100B7068B /* CellViewModel.m in Sources */,
 				05C572202147D24C00B7068B /* YZTagGroupCell.m in Sources */,
 				6003F5A7195388D20070C39A /* JHViewController.m in Sources */,
 				05C572192147D24C00B7068B /* YZTagGroupItem.m in Sources */,
 				05C5721A2147D24C00B7068B /* YZTagItem.m in Sources */,
 				05C572262147D28100B7068B /* JHTagListView.m in Sources */,
 				05C5721D2147D24C00B7068B /* YZHobbyCell.m in Sources */,
+				05DA481B214A4E7B0042A8F9 /* JHFilterPatrolTimeCell.m in Sources */,
 				05C5721B2147D24C00B7068B /* YZGroupHeaderView.m in Sources */,
 				05C572452147D5D100B7068B /* HistoryRecordViewController.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
 				05C572162147D24C00B7068B /* JHTagGroupItem.m in Sources */,
 				05C572522147D9FB00B7068B /* ReqFilterStoreModel.m in Sources */,
-				05C5724E2147D5D100B7068B /* CollectionInTableCellView.m in Sources */,
 				05C572502147D5D100B7068B /* DaiBanCellView.m in Sources */,
 				05C572182147D24C00B7068B /* YZGroupItem.m in Sources */,
 			);

@@ -8,11 +8,11 @@
 
 #import "HistoryRecordViewController.h"
 #import "YZTagList.h"
-#import "PatrolSearchBar.h"
+#import "FilterPatrolSearchBar.h"
 //#import "Utility.h"
 @interface HistoryRecordViewController ()<UISearchBarDelegate>
 @property (strong, nonatomic) IBOutlet UIScrollView *ibScrollView;
-@property (strong, nonatomic) IBOutlet PatrolSearchBar *ibSearchBar;
+@property (strong, nonatomic) IBOutlet FilterPatrolSearchBar *ibSearchBar;
 
 
 @end

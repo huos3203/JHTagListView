@@ -9,7 +9,7 @@
 #import "JHTagCenterViewController.h"
 #import "DaiBanViewController.h"
 
-#import "PatrolSearchBar.h"
+#import "FilterPatrolSearchBar.h"
 #import "JHTagListView.h"
 //#import "ReqFilterServer.h"
 #import "HistoryRecordViewController.h"
@@ -32,7 +32,7 @@
 @property (nonatomic, strong) NSMutableArray *titleLabels;
 
 
-@property (strong, nonatomic) IBOutlet PatrolSearchBar *ibSearchBar;
+@property (strong, nonatomic) IBOutlet FilterPatrolSearchBar *ibSearchBar;
 @property (strong, nonatomic) ReqFilterStoreModel *filterModel;
 @property (strong, nonatomic) IBOutlet UIView *ibErrorView;
 @property (strong, nonatomic) IBOutlet UIButton *ibRefreshBtn;

@@ -1,14 +1,14 @@
 //
-//  PatrolSearchBar.m
+//  FilterPatrolSearchBar.m
 //  YGPatrol(github地址)
 //
 //  Created by admin on 2018/5/11.
 //Copyright © 2018年 huoshuguang. All rights reserved.
 //
 
-#import "PatrolSearchBar.h"
+#import "FilterPatrolSearchBar.h"
 
-@implementation PatrolSearchBar
+@implementation FilterPatrolSearchBar
 
 #pragma mark - def
 

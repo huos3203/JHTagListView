@@ -1,5 +1,5 @@
 //
-//  PatrolSearchBar.h
+//  FilterPatrolSearchBar.h
 //  YGPatrol(github地址)
 //
 //  Created by admin on 2018/5/11.
@@ -8,7 +8,7 @@
 #import <UIKit/UIKit.h>
 
 IB_DESIGNABLE
-@interface PatrolSearchBar : UISearchBar
+@interface FilterPatrolSearchBar : UISearchBar
 @property (nonatomic) IBInspectable CGFloat borderWidth;
 
 @end
