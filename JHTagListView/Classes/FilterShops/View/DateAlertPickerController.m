@@ -6,20 +6,25 @@
 //  Copyright © 2017年 Jinhe. All rights reserved.
 //
 
-#import "DateAlertController.h"
+#import "DateAlertPickerController.h"
 
-#define mainw [UIScreen mainScreen].bounds.size.width
-#define mainh [UIScreen mainScreen].bounds.size.height
+//#define mainw [UIScreen mainScreen].bounds.size.width
+//#define mainh [UIScreen mainScreen].bounds.size.height
 
-@interface DateAlertController ()
+@interface DateAlertPickerController ()
 
 @end
 
-@implementation DateAlertController
-
+@implementation DateAlertPickerController
+{
+    CGFloat mainw;
+    CGFloat mainh;
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    mainw = [UIScreen mainScreen].bounds.size.width;
+    mainh = [UIScreen mainScreen].bounds.size.height;
 }
 
 - (void)didReceiveMemoryWarning {

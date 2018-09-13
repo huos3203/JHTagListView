@@ -9,9 +9,9 @@
 #import "JHFilterPatrolTimeCell.h"
 #import "JHTagItem.h"
 #import "YZTagCell.h"
-#import "DateAlertController.h"
+#import "DateAlertPickerController.h"
 
-@interface JHFilterPatrolTimeCell()<DateAlertDelegate>
+@interface JHFilterPatrolTimeCell()<DateAlertPickerDelegate>
 @property (strong, nonatomic) IBOutlet UIButton *ibStartTimeButton;
 @property (strong, nonatomic) IBOutlet UIButton *ibEndTimeButton;
 
@@ -50,7 +50,7 @@
     QueryDatePicker.maximumDate = [NSDate dateWithTimeIntervalSinceNow:0];
     //    用自定义的UIAlertController选择ActionShee信息模式  并将中间的信息显示范围空出来 高度自由指定
     
-    DateAlertController *alert = [DateAlertController alertControllerWithTitle:nil
+    DateAlertPickerController *alert = [DateAlertPickerController alertControllerWithTitle:nil
                                                                        message:@"\n\n\n\n\n\n\n\n\n\n\n"// 改变视图的高度以插入UIDatePicker
                                                                 preferredStyle:UIAlertControllerStyleActionSheet];
     alert.delegate = self;

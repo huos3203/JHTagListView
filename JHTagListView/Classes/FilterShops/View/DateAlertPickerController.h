@@ -7,15 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
-@protocol DateAlertDelegate <NSObject>
+@protocol DateAlertPickerDelegate <NSObject>
 - (void)dateAlertControllerChoosedDate:(NSDate *)date;
 - (void)dateAlertControllerCancelChoosedDate;
 @end
 
-@interface DateAlertController : UIAlertController
+@interface DateAlertPickerController : UIAlertController
 
 @property (nonatomic, retain) UIDatePicker *datePicker;
-@property (nonatomic, assign) id<DateAlertDelegate> delegate;
+@property (nonatomic, assign) id<DateAlertPickerDelegate> delegate;
 
 - (void)insertDatePicker:(UIDatePicker *)picker;
 

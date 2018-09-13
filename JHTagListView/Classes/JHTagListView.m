@@ -20,7 +20,7 @@
 #import "StoreLocationModel.h"
 #import "YZTagList.h"
 
-@interface JHTagListView()
+@interface JHTagListView()<UITableViewDelegate,UITableViewDataSource>
 @property (strong, nonatomic) IBOutlet UITableView *ibTableView;
 //动画
 @property (strong, nonatomic) IBOutlet NSLayoutConstraint *ibTableViewToLeftViewConut;
@@ -54,31 +54,22 @@
     if (indexPath.section == 1) return self.storeLocTagList.frame.size.height;
     if (indexPath.section == 3) return self.storeStatusTagList.frame.size.height;
     return UITableViewAutomaticDimension;
-//    JHGroupItem *item = [self.groups objectAtIndex:indexPath.section];
-//    CGFloat height;
-//    if (item.cellVH > 0) {
-//        //当第一次加载时，二级tableViewCell高度无法获取到
-//        height = item.cellVH;
-//    }else{
-//        JHTagGroupItem *tag = item.data[0];
-//        if (indexPath.section == 0) {
-//            height = item.data.count * 45;
-//        }else{
-//            height = tag.dpCellH;
-//        }
-//    }
-//    return height + 20;
 }
 
-- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
-    UILabel *label = [[UILabel alloc] initWithFrame:CGRectZero];
+
+-(NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+{
     JHGroupItem *sec = self.groups[section];
-    label.text = sec.name;
-    return label;
+    return sec.name;
+}
+- (void)tableView:(UITableView *)tableView willDisplayHeaderView:(nonnull UIView *)view forSection:(NSInteger)section{
+    view.tintColor = [UIColor lightGrayColor];
+    UITableViewHeaderFooterView *footer = (UITableViewHeaderFooterView *)view;
+    [footer.textLabel setTextColor:[UIColor darkGrayColor]];
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
-    return 50;
+    return 30;
 }
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
     return self.groups.count;
