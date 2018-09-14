@@ -16,10 +16,17 @@ typedef NS_OPTIONS(NSUInteger, TagListType) {
     YiZchaType = 1 << 2,
 };
 
-@interface JHTagCellModel : NSObject
+@interface JHTagBanliModel : NSObject
 @property (assign, nonatomic) TagListType tagType;
 /// id
 @property (strong, nonatomic) NSString *Id;
 /// 名称
 @property (strong, nonatomic) NSString *Name;
+//
+@property (strong, nonatomic) NSString *statusColor;
+@property (strong, nonatomic) NSString *address;
+@property (strong, nonatomic) NSString *time;
+@property (strong, nonatomic) NSString *xchaPeople;
+@property (strong, nonatomic) NSString *zhfPeople;
+@property (strong, nonatomic) NSString *zhfResult;
 @end

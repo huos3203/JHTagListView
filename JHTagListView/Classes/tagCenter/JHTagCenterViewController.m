@@ -8,6 +8,7 @@
 
 #import "JHTagCenterViewController.h"
 #import "DaiBanViewController.h"
+#import "YiBanViewController.h"
 
 #import "FilterPatrolSearchBar.h"
 #import "JHTagListView.h"
@@ -363,8 +364,7 @@
     
     // 判断控制器的view有没有加载过,如果已经加载过,就不需要加载
     if (vc.isViewLoaded) return;
-//    vc.view.frame = self.contentScrollView.bounds;
-    vc.view.frame = CGRectMake(offsetX, 0, XMGScreenW, self.contentScrollView.bounds.size.height);
+    vc.view.frame = CGRectMake(offsetX, 0, self.contentScrollView.bounds.size.width, self.contentScrollView.bounds.size.height);
     
     [self.contentScrollView addSubview:vc.view];
 }
@@ -416,14 +416,17 @@
 {
     DaiBanViewController *ssVc1 = [self.storyboard instantiateViewControllerWithIdentifier:@"DaiBanViewController"];
     ssVc1.title = @"待办(123)";
+    ssVc1.curTagType = DaiBanType;
     [self addChildViewController:ssVc1];
     // 预先设置初始显示的页面,不要忘记设置frame适应容器view的大小
-    DaiBanViewController *ssVc2 = [self.storyboard instantiateViewControllerWithIdentifier:@"DaiBanViewController"];
+    YiBanViewController *ssVc2 = [self.storyboard instantiateViewControllerWithIdentifier:@"YiBanViewController"];
     ssVc2.title = @"已办(123)";
+    ssVc2.curTagType = YiBanType;
     [self addChildViewController:ssVc2];
     
-    DaiBanViewController *ssVc3 = [self.storyboard instantiateViewControllerWithIdentifier:@"DaiBanViewController"];
+    YiBanViewController *ssVc3 = [self.storyboard instantiateViewControllerWithIdentifier:@"YiBanViewController"];
     ssVc3.title = @"管理(123)";
+    ssVc3.curTagType = GuanliType;
     [self addChildViewController:ssVc3];
 }
 

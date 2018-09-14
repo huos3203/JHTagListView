@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "JHTagBanliCell.h"
+
 @class DaiBanCellModel;
-@interface DaiBanCellView : UITableViewCell
-@property (strong, nonatomic) DaiBanCellModel *model;
+@interface DaiBanCellView : JHTagBanliCell
+@property (strong, nonatomic) DaiBanCellModel *dbModel;
 @end

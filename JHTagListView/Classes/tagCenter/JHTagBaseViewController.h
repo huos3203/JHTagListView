@@ -7,10 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "JHTagCellModel.h"
+#import "JHTagBanliModel.h"
 
 @interface JHTagBaseViewController : UIViewController
 
+@property (strong, nonatomic) IBOutlet UITableView *tableView;
+
 @property (assign, nonatomic) TagListType curTagType;
 @property (strong, nonatomic) NSMutableArray *dataArray;
+
 @end

@@ -6,9 +6,9 @@
 //  Copyright © 2018年 huoshuguang. All rights reserved.
 //
 
-#import "JHTagCellModel.h"
-@interface DaiBanCellModel : JHTagCellModel
-/// 地址
-@property (strong, nonatomic) NSString *Address;
+#import "JHTagBanliModel.h"
+@interface DaiBanCellModel : JHTagBanliModel
+
+@property (assign, nonatomic) BOOL isEditing;
 
 @end

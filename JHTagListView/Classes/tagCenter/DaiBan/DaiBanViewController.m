@@ -8,8 +8,11 @@
 
 #import "DaiBanViewController.h"
 #import "DaiBanCellView.h"
+#import "DaiBanCellModel.h"
 
 @interface DaiBanViewController()<UITableViewDelegate,UITableViewDataSource>
+@property (strong, nonatomic) IBOutlet UIButton *ibCheckAllButton;
+
 @end
 
 @implementation DaiBanViewController
@@ -32,9 +35,25 @@
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     DaiBanCellView *shopCell = [tableView dequeueReusableCellWithIdentifier:@"DaiBanCellView"];
     DaiBanCellModel *model = [self.dataArray objectAtIndex:indexPath.row];
-    shopCell.model = model;
+    shopCell.dbModel = model;
     return shopCell;
 }
+
+- (IBAction)ibaZhifaAction:(id)sender {
+    //TODO: 批量执法
+}
+- (IBAction)ibaResetCheckAllButtonAction:(id)sender {
+    if (_ibCheckAllButton.isSelected) _ibCheckAllButton.selected = NO;
+}
+
+- (IBAction)ibaCheckAllAction:(UIButton *)sender {
+    sender.selected = sender.isSelected?NO:YES;
+    for (DaiBanCellModel *model in self.dataArray) {
+        model.isEditing = sender.isSelected;
+    }
+    [self.tableView reloadData];
+}
+
 
 @end
 

@@ -8,27 +8,25 @@
 
 #import "DaiBanCellView.h"
 #import "DaiBanCellModel.h"
-//#import "UIColor+HexString.h"
-@interface DaiBanCellView()
-@property (strong, nonatomic) IBOutlet UILabel *ibTitleLabel;
-@property (strong, nonatomic) IBOutlet UILabel *ibStatusLabel;
-@property (strong, nonatomic) IBOutlet UIButton *ibCheckButton;
-@property (strong, nonatomic) IBOutlet UILabel *ibAddressLabel;
-@property (strong, nonatomic) IBOutlet UILabel *ibTimeLabel;
-@property (strong, nonatomic) IBOutlet UILabel *PatrolResultLabel;
-@property (strong, nonatomic) IBOutlet UILabel *PatrolPeopleLabel;
 
-@property (strong, nonatomic) IBOutlet NSLayoutConstraint *ibTitleConstraint;
+@interface DaiBanCellView()
+@property (strong, nonatomic) IBOutlet UIButton *ibCheckButton;
+@property (strong, nonatomic) IBOutlet UILabel *PatrolResultLabel;
 
 @end
 
 @implementation DaiBanCellView
 
-
--(void)setModel:(DaiBanCellModel *)model
+-(void)setDbModel:(DaiBanCellModel *)dbModel
 {
-    _ibTitleLabel.text = model.Name;
-    _ibTitleConstraint.constant = [UIScreen mainScreen].bounds.size.width - 90;
-    _ibAddressLabel.text = model.Address;
+    self.model = dbModel;
+    _dbModel = dbModel;
+    _ibCheckButton.selected = dbModel.isEditing;
 }
+
+- (IBAction)ibaCheckAction:(id)sender {
+    _ibCheckButton.selected = _ibCheckButton.isSelected?NO:YES;
+    _dbModel.isEditing = _ibCheckButton.selected;
+}
+
 @end

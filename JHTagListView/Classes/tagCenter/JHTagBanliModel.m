@@ -6,8 +6,8 @@
 //  Copyright © 2018年 huo3203@hotmail.com. All rights reserved.
 //
 
-#import "JHTagCellModel.h"
+#import "JHTagBanliModel.h"
 
-@implementation JHTagCellModel
+@implementation JHTagBanliModel
 
 @end

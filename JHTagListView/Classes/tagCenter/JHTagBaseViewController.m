@@ -10,9 +10,9 @@
 #import "MJRefresh.h"
 
 #import "DaiBanCellModel.h"
+#import "JHTagBanliModel.h"
 @interface JHTagBaseViewController ()
-@property (strong, nonatomic) IBOutlet UITableView *tableView;
-
+@property (strong, nonatomic) NSMutableArray *allTypeArr;
 @end
 
 @implementation JHTagBaseViewController
@@ -31,17 +31,21 @@
     DaiBanCellModel *model = [DaiBanCellModel new];
     model.tagType = DaiBanType;
     model.Name = @"测试数据";
-    model.Address = @"工作测试上地";
-    DaiBanCellModel *model2 = [DaiBanCellModel new];
+    model.time = @"2018-09-19";
+    model.xchaPeople = @"李四";
+    model.address = @"工作测试上地";
+    JHTagBanliModel *model2 = [JHTagBanliModel new];
     model2.tagType = YiBanType;
     model2.Name = @"测试数据2";
-    model2.Address = @"工作测试上地2";
+    model.time = @"2018-09-10";
+    model2.address = @"工作测试上地2";
+    model2.zhfResult = @"执法完成";
+    model2.zhfPeople = @"占三";
     DaiBanCellModel *model3 = [DaiBanCellModel new];
     model3.tagType = GuanliType;
     model3.Name = @"测试数据3";
-    model3.Address = @"工作测试上地3";
-    [self.dataArray addObjectsFromArray:@[model,model2,model3]];
-    
+    model3.address = @"工作测试上地3";
+    [self.allTypeArr addObjectsFromArray:@[model,model2,model3]];
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -58,14 +62,19 @@
 }
 
 #pragma mark getter/setter
+-(NSMutableArray *)allTypeArr
+{
+    if (!_allTypeArr) {
+        _allTypeArr = [NSMutableArray new];
+    }
+    return _allTypeArr;
+}
+
 -(NSMutableArray *)dataArray
 {
-    if (!_dataArray) {
-        _dataArray = [NSMutableArray new];
-    }
     //TODO:通过curTagType筛选要显示的列表数据
-    
-    return _dataArray;
+    NSArray *typeArr = [_allTypeArr filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"tagType = %d",self.curTagType]];
+    return [typeArr mutableCopy];
 }
 
 @end
