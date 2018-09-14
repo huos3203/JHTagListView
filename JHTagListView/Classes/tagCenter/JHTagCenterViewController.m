@@ -363,8 +363,8 @@
     
     // 判断控制器的view有没有加载过,如果已经加载过,就不需要加载
     if (vc.isViewLoaded) return;
-    
-    vc.view.frame = CGRectMake(offsetX, 0, XMGScreenW, XMGScreenH);
+//    vc.view.frame = self.contentScrollView.bounds;
+    vc.view.frame = CGRectMake(offsetX, 0, XMGScreenW, self.contentScrollView.bounds.size.height);
     
     [self.contentScrollView addSubview:vc.view];
 }
@@ -414,16 +414,15 @@
 // 添加所有子控制器
 - (void)setUpChildViewController
 {
-    DaiBanViewController *ssVc1 = [self.storyboard instantiateViewControllerWithIdentifier:@"JHTagBaseViewController"];
+    DaiBanViewController *ssVc1 = [self.storyboard instantiateViewControllerWithIdentifier:@"DaiBanViewController"];
     ssVc1.title = @"待办(123)";
     [self addChildViewController:ssVc1];
-    [ssVc1 didMoveToParentViewController:self];
-    DaiBanViewController *ssVc2 = [self.storyboard instantiateViewControllerWithIdentifier:@"JHTagBaseViewController"];
+    // 预先设置初始显示的页面,不要忘记设置frame适应容器view的大小
+    DaiBanViewController *ssVc2 = [self.storyboard instantiateViewControllerWithIdentifier:@"DaiBanViewController"];
     ssVc2.title = @"已办(123)";
-    [ssVc2 didMoveToParentViewController:self];
     [self addChildViewController:ssVc2];
     
-    DaiBanViewController *ssVc3 = [self.storyboard instantiateViewControllerWithIdentifier:@"JHTagBaseViewController"];
+    DaiBanViewController *ssVc3 = [self.storyboard instantiateViewControllerWithIdentifier:@"DaiBanViewController"];
     ssVc3.title = @"管理(123)";
     [self addChildViewController:ssVc3];
 }

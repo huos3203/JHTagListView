@@ -7,7 +7,7 @@
 //
 
 #import "JHFilterStoreTypeCell.h"
-#import "YZTagCell.h"
+#import "JHTagCollCell.h"
 #import "JHTagItem.h"
 
 @interface JHFilterStoreTypeCell()<UICollectionViewDelegate,UICollectionViewDataSource>
@@ -27,7 +27,6 @@
     [super layoutSubviews];
     UICollectionViewFlowLayout *layout = self.collectionView.collectionViewLayout;
     CGFloat margin = 10;
-//    CGFloat cols = 2;
     CGFloat itemW = 80;
     layout.itemSize = CGSizeMake(itemW, 30);
     layout.minimumInteritemSpacing = margin;
@@ -62,7 +61,8 @@
                                       animated:NO
                                 scrollPosition:UICollectionViewScrollPositionNone];
     }
-    YZTagCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:cellId forIndexPath:indexPath];
+    JHTagCollCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:cellId forIndexPath:indexPath];
+    
     cell.item = item;
     return cell;
 }

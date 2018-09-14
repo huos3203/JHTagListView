@@ -19,12 +19,12 @@
 {
     if (self = [super init]) {
         // 高度可以设置为0，会自动跟随标题计算
-        self.frame = CGRectMake(0, 0,[UIScreen mainScreen].bounds.size.width, 0);
+        self.frame = CGRectMake(10, 0,[UIScreen mainScreen].bounds.size.width, 0);
         self.tagBackgroundColor = [UIColor colorWithRed:238 / 255.0 green:238 / 255.0 blue:238 / 255.0 alpha:1];
-        self.tagFont = [UIFont systemFontOfSize:15];
+        self.tagFont = [UIFont systemFontOfSize:14];
         self.tagButtonMargin = 10;
         self.tagCornerRadius = 8;
-        self.tagMargin = 20;
+        self.tagMargin = 10;
         self.tagColor = [UIColor colorWithRed:102 / 255.0 green:102 / 255.0 blue:102 / 255.0 alpha:1];
     }
     return self;
@@ -41,6 +41,13 @@
     [_tagArr addObjectsFromArray:tagModels];
     for (JHTagModel *model in tagModels) {
         [self addTag:model.title];
+    }
+    //边框
+    for (UIButton *btn in self.tagButtons) {
+        btn.layer.cornerRadius = 8;
+        btn.layer.borderWidth = .5;
+        [btn setBackgroundColor:[UIColor whiteColor]];
+        btn.layer.borderColor = [UIColor colorWithHexString:@"BDBDBD"].CGColor;
     }
 }
 
@@ -59,11 +66,12 @@
     }
     
     if (model.isSelected) {
-        [button setBackgroundColor:[UIColor colorWithHexString:@"4287ff"]];
-        [button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+        [button setBackgroundColor:[UIColor colorWithHexString:@"F5FFEA"]];
+        [button setTitleColor:[UIColor colorWithHexString:@"70AB29"] forState:UIControlStateNormal];
+        button.layer.borderColor = [UIColor colorWithHexString:@"8ABB4F"].CGColor;
     }else{
         [button setTitleColor:self.tagColor forState:UIControlStateNormal];
-        [button setBackgroundColor:self.tagBackgroundColor];
+        [button setBackgroundColor:[UIColor whiteColor]];
     }
 }
 
@@ -73,7 +81,8 @@
     JHTagModel *model2 = _tagArr[index];
     model2.isSelected = NO;
     UIButton *tagBtn = self.tagButtons[index];
+    tagBtn.layer.borderColor = [UIColor colorWithHexString:@"BDBDBD"].CGColor;
     [tagBtn setTitleColor:self.tagColor forState:UIControlStateNormal];
-    [tagBtn setBackgroundColor:self.tagBackgroundColor];
+    [tagBtn setBackgroundColor:[UIColor whiteColor]];
 }
 @end

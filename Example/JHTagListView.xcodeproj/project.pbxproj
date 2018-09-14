@@ -16,6 +16,7 @@
 		05586FA8214B64B900C951C6 /* JHFilterTagList.m in Sources */ = {isa = PBXBuildFile; fileRef = 05586FA7214B64B900C951C6 /* JHFilterTagList.m */; };
 		05586FAC214B64F100C951C6 /* JHTagModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 05586FAB214B64F100C951C6 /* JHTagModel.m */; };
 		05586FAF214B6B4F00C951C6 /* UIColor+HexString.m in Sources */ = {isa = PBXBuildFile; fileRef = 05586FAE214B6B4E00C951C6 /* UIColor+HexString.m */; };
+		05586FB2214B81F000C951C6 /* JHTagCollCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 05586FB1214B81F000C951C6 /* JHTagCollCell.m */; };
 		05C572152147D24C00B7068B /* JHGroupItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 05C571F92147D24C00B7068B /* JHGroupItem.m */; };
 		05C572162147D24C00B7068B /* JHTagGroupItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 05C571FB2147D24C00B7068B /* JHTagGroupItem.m */; };
 		05C572172147D24C00B7068B /* JHTagItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 05C571FD2147D24C00B7068B /* JHTagItem.m */; };
@@ -81,6 +82,8 @@
 		05586FAB214B64F100C951C6 /* JHTagModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JHTagModel.m; sourceTree = "<group>"; };
 		05586FAD214B6B4E00C951C6 /* UIColor+HexString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+HexString.h"; sourceTree = "<group>"; };
 		05586FAE214B6B4E00C951C6 /* UIColor+HexString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+HexString.m"; sourceTree = "<group>"; };
+		05586FB0214B81F000C951C6 /* JHTagCollCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JHTagCollCell.h; sourceTree = "<group>"; };
+		05586FB1214B81F000C951C6 /* JHTagCollCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JHTagCollCell.m; sourceTree = "<group>"; };
 		05C571F82147D24C00B7068B /* JHGroupItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHGroupItem.h; sourceTree = "<group>"; };
 		05C571F92147D24C00B7068B /* JHGroupItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHGroupItem.m; sourceTree = "<group>"; };
 		05C571FA2147D24C00B7068B /* JHTagGroupItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHTagGroupItem.h; sourceTree = "<group>"; };
@@ -209,6 +212,8 @@
 		052C5CAF214929FC00A31B24 /* DaiBan */ = {
 			isa = PBXGroup;
 			children = (
+				05C572372147D5D100B7068B /* DaiBanViewController.h */,
+				05C572382147D5D100B7068B /* DaiBanViewController.m */,
 				052C5CAC2149283B00A31B24 /* JHTagCellModel.h */,
 				052C5CAD2149283B00A31B24 /* JHTagCellModel.m */,
 				05C5722F2147D5D100B7068B /* DaiBanCellModel.h */,
@@ -226,6 +231,8 @@
 				05586FA7214B64B900C951C6 /* JHFilterTagList.m */,
 				05586FAA214B64F100C951C6 /* JHTagModel.h */,
 				05586FAB214B64F100C951C6 /* JHTagModel.m */,
+				05586FB0214B81F000C951C6 /* JHTagCollCell.h */,
+				05586FB1214B81F000C951C6 /* JHTagCollCell.m */,
 			);
 			path = TagListView;
 			sourceTree = "<group>";
@@ -250,6 +257,8 @@
 		05C571F02147D0FF00B7068B /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				05C572352147D5D100B7068B /* ReqFilterServer.h */,
+				05C572362147D5D100B7068B /* ReqFilterServer.m */,
 				052C5CA52148FC1200A31B24 /* tagCenter */,
 				05C572272147D5D100B7068B /* FilterShops */,
 				05C571F62147D24C00B7068B /* SelectTag */,
@@ -318,13 +327,9 @@
 		05C572272147D5D100B7068B /* FilterShops */ = {
 			isa = PBXGroup;
 			children = (
+				05C5723A2147D5D100B7068B /* View */,
 				05C572242147D28100B7068B /* JHTagListView.h */,
 				05C572252147D28100B7068B /* JHTagListView.m */,
-				05C5723A2147D5D100B7068B /* View */,
-				05C572352147D5D100B7068B /* ReqFilterServer.h */,
-				05C572362147D5D100B7068B /* ReqFilterServer.m */,
-				05C572372147D5D100B7068B /* DaiBanViewController.h */,
-				05C572382147D5D100B7068B /* DaiBanViewController.m */,
 				05C572282147D5D100B7068B /* HistoryRecordViewController.h */,
 				05C572292147D5D100B7068B /* HistoryRecordViewController.m */,
 				05C5722A2147D5D100B7068B /* Model */,
@@ -688,6 +693,7 @@
 				05C572162147D24C00B7068B /* JHTagGroupItem.m in Sources */,
 				05C572522147D9FB00B7068B /* ReqFilterStoreModel.m in Sources */,
 				05C572502147D5D100B7068B /* DaiBanCellView.m in Sources */,
+				05586FB2214B81F000C951C6 /* JHTagCollCell.m in Sources */,
 				05C572182147D24C00B7068B /* YZGroupItem.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

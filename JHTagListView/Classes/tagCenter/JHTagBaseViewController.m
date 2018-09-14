@@ -10,7 +10,7 @@
 #import "MJRefresh.h"
 
 #import "DaiBanCellModel.h"
-@interface JHTagBaseViewController ()<UITableViewDataSource>
+@interface JHTagBaseViewController ()
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
 
 @end

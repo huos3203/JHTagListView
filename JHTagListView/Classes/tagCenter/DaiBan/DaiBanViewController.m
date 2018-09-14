@@ -15,7 +15,6 @@
 @implementation DaiBanViewController
 
 #pragma mark - def
-//MARK: override
 -(void)viewDidLoad{
     [super viewDidLoad];
 }
@@ -31,7 +30,7 @@
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    DaiBanCellView *shopCell = [tableView dequeueReusableCellWithIdentifier:@"FilterPatrolStoreCellView"];
+    DaiBanCellView *shopCell = [tableView dequeueReusableCellWithIdentifier:@"DaiBanCellView"];
     DaiBanCellModel *model = [self.dataArray objectAtIndex:indexPath.row];
     shopCell.model = model;
     return shopCell;

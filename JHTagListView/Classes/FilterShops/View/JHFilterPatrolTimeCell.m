@@ -8,7 +8,7 @@
 
 #import "JHFilterPatrolTimeCell.h"
 #import "JHTagItem.h"
-#import "YZTagCell.h"
+#import "JHTagCollCell.h"
 #import "DateAlertPickerController.h"
 
 @interface JHFilterPatrolTimeCell()<DateAlertPickerDelegate>
