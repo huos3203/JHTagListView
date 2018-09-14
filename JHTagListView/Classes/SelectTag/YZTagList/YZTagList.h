@@ -17,6 +17,7 @@
  *  标签删除图片
  */
 @property (nonatomic, strong) UIImage *tagDeleteimage;
+@property (nonatomic, strong) NSMutableArray *tagButtons;
 
 /**
  *  标签间距,和距离左，上间距,默认10

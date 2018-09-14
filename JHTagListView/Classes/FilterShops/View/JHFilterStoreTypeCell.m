@@ -23,7 +23,16 @@
     // Initialization code
 }
 
-
+-(void)layoutSubviews{
+    [super layoutSubviews];
+    UICollectionViewFlowLayout *layout = self.collectionView.collectionViewLayout;
+    CGFloat margin = 10;
+//    CGFloat cols = 2;
+    CGFloat itemW = 80;
+    layout.itemSize = CGSizeMake(itemW, 30);
+    layout.minimumInteritemSpacing = margin;
+    layout.minimumLineSpacing = 10;
+}
 -(void)setTypeName:(NSString *)typeName
 {
     _ibTypeLabel.text = typeName;
@@ -57,4 +66,27 @@
     cell.item = item;
     return cell;
 }
+-(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    JHTagItem *item = self.tagArr[indexPath.row];
+    if (indexPath.row == 0) {
+        item.isSelected = YES;
+        [self resetItemStatus];
+    }else{
+         JHTagItem *firstItem = self.tagArr[0];
+        firstItem.isSelected = NO;
+        item.isSelected = item.isSelected?NO:YES;
+    }
+    [collectionView reloadData];
+}
+
+//取消选择
+-(void)resetItemStatus
+{
+    for (int i = 1; i < self.tagArr.count; i++) {
+        JHTagItem *item = self.tagArr[i];
+        item.isSelected = NO;
+    }
+}
+
 @end

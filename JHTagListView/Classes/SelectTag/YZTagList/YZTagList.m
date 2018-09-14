@@ -17,7 +17,6 @@ CGFloat const imageViewWH = 20;
 }
 @property (nonatomic, weak) UICollectionView *tagListView;
 @property (nonatomic, strong) NSMutableDictionary *tags;
-@property (nonatomic, strong) NSMutableArray *tagButtons;
 /**
  *  需要移动的矩阵
  */
