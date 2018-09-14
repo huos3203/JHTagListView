@@ -258,6 +258,16 @@
                                     <constraint firstAttribute="height" constant="44" id="slv-6h-Q05"/>
                                 </constraints>
                             </scrollView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="INx-Kn-NSt" userLabel="分割线">
+                                <rect key="frame" x="0.0" y="109" width="375" height="1"/>
+                                <color key="backgroundColor" red="0.87058823529999996" green="0.87058823529999996" blue="0.87058823529999996" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="0.5" id="QSj-47-NNr"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QZH-rN-q6Q">
                                 <rect key="frame" x="0.0" y="109" width="375" height="558"/>
                             </scrollView>
@@ -557,11 +567,14 @@
                             <constraint firstItem="nl6-rG-PxI" firstAttribute="top" secondItem="7FG-xn-czg" secondAttribute="bottom" id="47E-Rb-Uiz"/>
                             <constraint firstItem="Iqj-UO-VIc" firstAttribute="leading" secondItem="5NQ-YR-KQw" secondAttribute="leading" constant="1000" id="5Ky-ql-8Jz"/>
                             <constraint firstItem="24o-DT-uaq" firstAttribute="top" secondItem="Iqj-UO-VIc" secondAttribute="bottom" id="CdF-6w-HeZ"/>
+                            <constraint firstItem="INx-Kn-NSt" firstAttribute="top" secondItem="7VC-dv-cMc" secondAttribute="bottom" id="Dr4-SZ-b20"/>
                             <constraint firstItem="nl6-rG-PxI" firstAttribute="leading" secondItem="5NQ-YR-KQw" secondAttribute="leading" id="GSl-4d-saB"/>
                             <constraint firstAttribute="bottom" secondItem="QZH-rN-q6Q" secondAttribute="bottom" id="QIS-T5-7zv"/>
                             <constraint firstAttribute="trailing" secondItem="7VC-dv-cMc" secondAttribute="trailing" id="ScZ-11-7zD"/>
                             <constraint firstAttribute="trailing" secondItem="nl6-rG-PxI" secondAttribute="trailing" id="VaJ-XD-Brc"/>
-                            <constraint firstItem="QZH-rN-q6Q" firstAttribute="top" secondItem="7VC-dv-cMc" secondAttribute="bottom" id="b6n-L1-4pH"/>
+                            <constraint firstItem="INx-Kn-NSt" firstAttribute="width" secondItem="5NQ-YR-KQw" secondAttribute="width" id="WcP-cq-xbQ"/>
+                            <constraint firstItem="INx-Kn-NSt" firstAttribute="leading" secondItem="5NQ-YR-KQw" secondAttribute="leading" id="ZqM-DS-MT0"/>
+                            <constraint firstItem="QZH-rN-q6Q" firstAttribute="top" secondItem="7VC-dv-cMc" secondAttribute="bottom" constant="0.5" id="b6n-L1-4pH"/>
                             <constraint firstAttribute="trailing" secondItem="7FG-xn-czg" secondAttribute="trailing" id="jR7-pp-7Qo"/>
                             <constraint firstItem="7FG-xn-czg" firstAttribute="top" secondItem="5NQ-YR-KQw" secondAttribute="top" constant="20" id="ls3-Kq-Mon"/>
                             <constraint firstItem="Iqj-UO-VIc" firstAttribute="width" secondItem="5NQ-YR-KQw" secondAttribute="width" id="pPe-i8-obd"/>

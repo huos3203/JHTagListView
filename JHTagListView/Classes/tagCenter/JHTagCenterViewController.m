@@ -15,6 +15,7 @@
 //#import "ReqFilterServer.h"
 #import "HistoryRecordViewController.h"
 #import "ReqFilterStoreModel.h"
+#import "UIColor+HexString.h"
 
 //#import "Utility.h"
 //#import "MJRefresh.h"
@@ -248,7 +249,7 @@
     CGFloat labelX = 0;
     CGFloat labelY = 0;
     CGFloat labelH = 44;
-    UIColor *selColor = [UIColor greenColor];
+    UIColor *selColor = [UIColor colorWithHexString:@"87BA4B"];
 
     for (int i = 0; i < count; i++) {
         // 获取对应子控制器
@@ -277,7 +278,7 @@
         // 文字居中
         label.textAlignment = NSTextAlignmentCenter;
         // line下划线
-        UILabel *line = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, labelW - 60, 1)];
+        UILabel *line = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, labelW - 60, 1.5)];
         line.center = CGPointMake(labelW/2, labelH-1);
         line.backgroundColor = selColor;
         line.hidden = YES;
