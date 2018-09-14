@@ -34,18 +34,34 @@
     model.time = @"2018-09-19";
     model.xchaPeople = @"李四";
     model.address = @"工作测试上地";
+    model.statusColor = @"FF5C4D";
     JHTagBanliModel *model2 = [JHTagBanliModel new];
     model2.tagType = YiBanType;
     model2.Name = @"测试数据2";
-    model.time = @"2018-09-10";
+    model2.time = @"2018-09-10";
     model2.address = @"工作测试上地2";
     model2.zhfResult = @"执法完成";
     model2.zhfPeople = @"占三";
-    DaiBanCellModel *model3 = [DaiBanCellModel new];
+    model2.xchaPeople = @"李四";
+    model2.statusColor = @"3B92FF";
+    JHTagBanliModel *model3 = [JHTagBanliModel new];
     model3.tagType = GuanliType;
     model3.Name = @"测试数据3";
     model3.address = @"工作测试上地3";
-    [self.allTypeArr addObjectsFromArray:@[model,model2,model3]];
+    model3.zhfResult = @"执法完成";
+    model3.time = @"2018-09-10";
+    model3.xchaPeople = @"李四";
+    model3.statusColor = @"333333";
+    JHTagBanliModel *model4 = [JHTagBanliModel new];
+    model4.tagType = GuanliType;
+    model4.time = @"2018-09-10";
+    model4.Name = @"测试数据4";
+    model4.address = @"工作测试上地4";
+    model4.zhfResult = @"执法完成";
+    model4.zhfPeople = @"guanlidd";
+    model4.xchaPeople = @"李四";
+    model4.statusColor = @"87BA4B";
+    [self.allTypeArr addObjectsFromArray:@[model,model2,model3,model4]];
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section

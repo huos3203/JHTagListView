@@ -862,7 +862,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ten-rA-wc5" userLabel="状态条">
-                                                    <rect key="frame" x="1" y="19" width="5" height="121"/>
+                                                    <rect key="frame" x="1" y="19" width="5" height="148"/>
                                                     <color key="backgroundColor" red="0.46065974240000002" green="0.73952114579999995" blue="0.23804152009999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="5" id="1df-O9-eIn"/>
@@ -871,8 +871,8 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="巡查时间:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dkq-ln-LIn">
-                                                    <rect key="frame" x="20" y="47" width="70" height="19.5"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="执法时间:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dkq-ln-LIn">
+                                                    <rect key="frame" x="20" y="47" width="70" height="20"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -939,9 +939,9 @@
                                                 <constraint firstItem="pNU-Xf-VFH" firstAttribute="leading" secondItem="dkq-ln-LIn" secondAttribute="leading" id="ECQ-0E-mOu"/>
                                                 <constraint firstItem="5iX-U5-C7R" firstAttribute="centerY" secondItem="Yhg-Xm-sQr" secondAttribute="centerY" id="F67-7x-aYL"/>
                                                 <constraint firstItem="5iX-U5-C7R" firstAttribute="leading" secondItem="Yhg-Xm-sQr" secondAttribute="trailing" constant="6" id="KS0-0X-nSA"/>
-                                                <constraint firstItem="GLw-dg-IXJ" firstAttribute="bottom" secondItem="Ten-rA-wc5" secondAttribute="bottom" constant="2" id="PcX-Ad-YmO"/>
                                                 <constraint firstItem="pNU-Xf-VFH" firstAttribute="top" secondItem="dkq-ln-LIn" secondAttribute="bottom" constant="5" id="T5Y-Ky-bLT"/>
                                                 <constraint firstItem="aaj-UA-r7R" firstAttribute="leading" secondItem="pNU-Xf-VFH" secondAttribute="leading" id="U37-y4-HXB"/>
+                                                <constraint firstItem="Yhg-Xm-sQr" firstAttribute="bottom" secondItem="Ten-rA-wc5" secondAttribute="bottom" id="V4x-43-Hm1"/>
                                                 <constraint firstItem="Yhg-Xm-sQr" firstAttribute="top" secondItem="GLw-dg-IXJ" secondAttribute="bottom" constant="5" id="VtO-go-EVh"/>
                                                 <constraint firstAttribute="trailing" secondItem="Dya-5s-Bfw" secondAttribute="trailing" constant="20" id="YMY-RH-n5j"/>
                                                 <constraint firstItem="Yhg-Xm-sQr" firstAttribute="leading" secondItem="GLw-dg-IXJ" secondAttribute="leading" id="Yfw-5T-XxK"/>
