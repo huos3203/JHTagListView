@@ -28,7 +28,10 @@
     UICollectionViewFlowLayout *layout = self.collectionView.collectionViewLayout;
     CGFloat margin = 10;
     CGFloat itemW = 80;
-    layout.itemSize = CGSizeMake(itemW, 30);
+#pragma mark — 视图控制器中使用:(关键)
+    // layout约束这边必须要用estimatedItemSize才能实现自适应,使用itemSzie无效
+    layout.estimatedItemSize = CGSizeMake(80, 30);
+//    layout.itemSize = CGSizeMake(itemW, 30);
     layout.minimumInteritemSpacing = margin;
     layout.minimumLineSpacing = 10;
 }

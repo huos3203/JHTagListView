@@ -24,4 +24,18 @@
     self.tagLabel.text = item.name;
     self.layer.borderColor = item.isSelected?[UIColor colorWithHexString:@"8ABB4F"].CGColor:[UIColor colorWithHexString:@"BDBDBD"].CGColor;
 }
+
+
+#pragma mark — 实现自适应文字宽度的关键步骤:item的layoutAttributes
+- (UICollectionViewLayoutAttributes *)preferredLayoutAttributesFittingAttributes:(UICollectionViewLayoutAttributes *)layoutAttributes{
+    
+    UICollectionViewLayoutAttributes *attributes = [super preferredLayoutAttributesFittingAttributes:layoutAttributes];
+    CGRect rect = [self.tagLabel.text boundingRectWithSize:CGSizeMake(CGFLOAT_MAX, 30) options:NSStringDrawingTruncatesLastVisibleLine|   NSStringDrawingUsesFontLeading |NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName: [UIFont systemFontOfSize:15]} context:nil];
+    rect.size.width +=20;
+    rect.size.height+=10;
+    attributes.frame = rect;
+    return attributes;
+    
+}
+
 @end

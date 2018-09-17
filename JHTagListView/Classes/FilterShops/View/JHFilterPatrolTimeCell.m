@@ -44,9 +44,11 @@
 -(void)showDatePickerView
 {
     UIDatePicker *QueryDatePicker = [[UIDatePicker alloc] init];
-    QueryDatePicker.datePickerMode = UIDatePickerModeDate;//时间模式的选择 有多种
+    //时间模式的选择 有多种
+    QueryDatePicker.datePickerMode = UIDatePickerModeDate;
     QueryDatePicker.backgroundColor = [UIColor clearColor];
-    QueryDatePicker.minimumDate = [NSDate dateWithTimeIntervalSinceNow:280 * 24 * 60 * 60 * -1]; // 设置最小时间
+    // 设置最小时间
+    QueryDatePicker.minimumDate = [NSDate dateWithTimeIntervalSinceNow:280 * 24 * 60 * 60 * -1];
     QueryDatePicker.maximumDate = [NSDate dateWithTimeIntervalSinceNow:0];
     //    用自定义的UIAlertController选择ActionShee信息模式  并将中间的信息显示范围空出来 高度自由指定
     

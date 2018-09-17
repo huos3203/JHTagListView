@@ -38,7 +38,8 @@
 {
     if (!picker)
         return;
-    
+    mainw = [UIScreen mainScreen].bounds.size.width;
+    mainh = [UIScreen mainScreen].bounds.size.height;
     self.datePicker = picker;                         //高度需要估算
     self.datePicker.frame = CGRectMake(0, 20, mainw-20, 216);
     
