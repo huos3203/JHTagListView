@@ -264,6 +264,7 @@
 			isa = PBXGroup;
 			children = (
 				05C571EE2147D0FF00B7068B /* Assets */,
+				05C571F62147D24C00B7068B /* SelectTag */,
 				05C571F02147D0FF00B7068B /* Classes */,
 			);
 			name = JHTagListView;
@@ -284,7 +285,6 @@
 				05C572362147D5D100B7068B /* ReqFilterServer.m */,
 				052C5CA52148FC1200A31B24 /* tagCenter */,
 				05C572272147D5D100B7068B /* FilterShops */,
-				05C571F62147D24C00B7068B /* SelectTag */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
